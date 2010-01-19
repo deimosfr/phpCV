@@ -9,22 +9,22 @@ License : This software is under GPL2 Licence
 Description
 --------------------------------------------------------------------------------
 
-phpCV is a tool developped in PHP to help you to create your Curriculum Vitae.
+phpCV is a tool developed in PHP to help you to create your Curriculum Vitae.
 
 When I've searched for a web CV, I didn't find what I would like instead of
 a specific project : Sample Resume Template (http://sampleresumetemplate.net/)
 
 The problem is it's written in HTML and is not modular at all. Anyway, it's
-kindly beautifull. I also would like a PDF version of my web CV and other cool
-stuffs that I tought I could bring to it.
+kindly beautiful. I also would like a PDF version of my web CV and other cool
+stuffs that I thought I could bring to it.
 
 That's why, with phpCV you can :
 * Choose any part of the CV you would like
-* Contruct it with a simple file
+* Construct it with a simple file
 * Have a bi language CV
 * Get your age automatically calculated from your birth informations
 * Generate a PDF on the fly (using wkhtmltopdf project)
-* Show some personnal informations with a password in URL normally hidden
+* Show some personal informations with a password in URL normally hidden
 * Get a web CV conform to W3C
 
 This is a good list of what you can do with it. If you have any other ideas, do
@@ -36,7 +36,7 @@ Prerequisite
 
 Before starting, you need :
 * A web server like Apache or Lighttpd
-* PHP module installed and functionnal for your web server
+* PHP module installed and functional for your web server
 
 In addition, if you want to generate PDF on the fly, you'll need to have :
 * wkhtmltopdf installed (http://code.google.com/p/wkhtmltopdf)
@@ -49,7 +49,7 @@ I won't describe the installation of a web server and PHP module as it could be
 different between the OS and the web server you've chosen.
 
 To install phpCV, it's very simple. After having downloaded the archive,
-decompress it in your web server root (ex: /var/www/phpCV). Tha's all :-)
+decompress it in your web server root (ex: /var/www/phpCV). That's all :-)
 
 If you want to have to possibility to generate PDF, download the binary of
 wkhtmltopdf from the website and put it in a path available from your web
@@ -61,11 +61,11 @@ required libraries in the chroot dir to make it work.
 Configuration / Usage
 --------------------------------------------------------------------------------
 
-Anytime you want to check what your CV looks like, you need to connect with
+Any time you want to check what your CV looks like, you need to connect with
 your favorite web browser on :
-* http://your_web_server/phpCV
+ http://your_web_server/phpCV
 
-Now you should edit the config.php file in phpCV folder to create your own CV.
+Now you should edit the config.php file in phpCV folder to create your own CV
 
 === Changing values ===
 
@@ -113,11 +113,11 @@ with or remove the line containing the title. For example :
 
 This will remove the profile part.
 
-=== Personnal hidden part ===
+=== Personal hidden part ===
 
 This part is not in the config.php file but in the cv.php file. You can set a
-password like to allow users to view filtred content of your CV. Generally it's
-when you want to hide your personnal phone number etc...
+password like to allow users to view filtered content of your CV. Generally it's
+when you want to hide your personal phone number etc...
 
 Simply change the line containing :
 - $secret = 'mysecret';
@@ -133,7 +133,7 @@ Now you can see both version using this kind of url :
 === Generate PDF ===
 
 As soon as you've correctly installed wkhtmltopdf, you need to configure it at
-the end of the ocnfig.php file.
+the end of the config.php file.
 
 If you do not insert a name value in $pdf_filename, you'll the default generated
 name will be :
@@ -154,9 +154,9 @@ try this URL :
 
 === Combination ===
 
-You can combinate multiple options in your URL. For example, if I want a CV :
+You can combines multiple options in your URL. For example, if I want a CV :
 * With fr language
-* With the personnal hidden part
+* With the personal hidden part
 * In a PDF format
 * Exclude W3C logo
 
