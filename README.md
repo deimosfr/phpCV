@@ -62,7 +62,8 @@ your favorite web browser on :
 
 Now you should edit the config.php file in phpCV folder to create your own CV
 
-* Changing values
+Changing values
+---------------
 
 To change default values, simply replace what is in "". Example, by default, I
 have :
@@ -79,83 +80,87 @@ array and must be used between different elements.
 There are also arrays in arrays like for educations. You can add as many arrays
 you wish in the main array. Warn again with nouns.
 
-* Languages
+Languages
+---------
 
 Per default, there are 2 languages : French and English.
 
 To access to the different versions, simply type in your browser :
- * http://your_web_server/phpCV?en --> For the english version
- * http://your_web_server/phpCV?fr --> For the french version
+* http://your_web_server/phpCV?en --> For the english version
+* http://your_web_server/phpCV?fr --> For the french version
 
 You can change this by modifying the 2 letters ('fr') on the line containing :
- * "$lang == 'fr'"
+* "$lang == 'fr'"
 
-* Remove unwanted parts
+Remove unwanted parts
+---------------------
 
 With all the availables part in the CV, you may not want to view some of them.
 The question is how to simply remove them ?
 
 Don't worry, it's easy. For example, you have this kind of parts used with a
 title :
- * Profile : $profile_title
- * Aim : $aim_title
- * Education : $education_title
- * ...
+* Profile : $profile_title
+* Aim : $aim_title
+* Education : $education_title
+* ...
 
 So if I want to disable one part, you simple need to empty the value associated
 with or remove the line containing the title. For example :
- * $profile_title = "";
+* $profile_title = "";
 
 This will remove the profile part.
 
-* Personal hidden part
+Personal hidden part
+--------------------
 
 This part is not in the config.php file but in the cv.php file. You can set a
 password like to allow users to view filtered content of your CV. Generally it's
 when you want to hide your personal phone number etc...
 
 Simply change the line containing :
- * $secret = 'mysecret';
+* $secret = 'mysecret';
 By the secret password you would like (here mysecret).
 
 To modify the hidden part, look at the config.php file and change the
 $personnal_infos_full values.
 
 Now you can see both version using this kind of url :
- * http://your_web_server/phpCV?en_mysecret --> For the full version
- * http://your_web_server/phpCV?en --> For the normal hidden version
+* http://your_web_server/phpCV?en_mysecret --> For the full version
+* http://your_web_server/phpCV?en --> For the normal hidden version
 
-* Generate PDF
-
+Generate PDF
+------------
 As soon as you've correctly installed wkhtmltopdf, you need to configure it at
 the end of the config.php file.
 
 If you do not insert a name value in $pdf_filename, you'll the default generated
 name will be :
- * firstname_secondname-cv_language.pdf
+* firstname_secondname-cv_language.pdf
 For example, my name is Pierre Mavro and I want my CV in french, the generated
 PDF file will be :
- * pierre_mavro-cv_fr.pdf
+* pierre_mavro-cv_fr.pdf
 
 To generate the PDF file, simply type this in your browser :
- * http://your_web_server/phpCV?en_pdf
+* http://your_web_server/phpCV?en_pdf
 
-* W3C logo exclusion
-
+W3C logo exclusion
+------------------
 If you don't want the W3C logo, you can disable it by adding exclude in the
 URL. I admit it's usually necessary when you want to generate a PDF. Simply
 try this URL :
- * http://your_web_server/phpCV?en_exclude
+* http://your_web_server/phpCV?en_exclude
 
-* Combination
+Combination
+-----------
 
 You can combines multiple options in your URL. For example, if I want a CV :
- * With fr language
- * With the personal hidden part
- * In a PDF format
- * Exclude W3C logo
+* With fr language
+* With the personal hidden part
+* In a PDF format
+* Exclude W3C logo
 
 I need to type as URL :
- * http://your_web_server/phpCV?fr_mysecret_pdf_exclude
+* http://your_web_server/phpCV?fr_mysecret_pdf_exclude
 
 Isn't it easy ? :-)
